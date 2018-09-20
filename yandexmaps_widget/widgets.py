@@ -35,7 +35,7 @@ class YMapsPointWidget(widgets.Input):
             'longitude': getattr(settings, 'YMAP_CENTER_LONGITUDE', 37.64),
         }
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, **kwargs):
         r = super(YMapsPointWidget, self).render(name, value, attrs)
         params = self.map_options
         params['input_id'] = attrs['id']
